@@ -1,0 +1,23 @@
+{
+  "name": "com.demegraunt.framework.spriteanimations",
+  "author":
+  {
+    "name": "Devid Sorochinsky",
+    "url": "https://github.com/Demexis"
+  },
+  "displayName": "Demegraunt Framework Sprite Animations",
+  "description": "Simple sprite animations if you don't need complexity of the default Unity's animator.",
+  "unity": "2022.2",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Demexis/Demegraunt.Framework.SpriteAnimations.git"
+  },
+  "keywords":
+  [
+    "demegraunt",
+    "framework",
+	"sprite",
+	"aniamtions"
+  ]
+}

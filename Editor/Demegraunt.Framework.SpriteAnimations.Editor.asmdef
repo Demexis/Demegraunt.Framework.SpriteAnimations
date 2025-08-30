@@ -1,0 +1,19 @@
+{
+    "name": "Demegraunt.Framework.SpriteAnimations.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5cca828dfac45dc42a8e51d1fd0f3b2c",
+        "GUID:d03013f21608d2f4f80b49eba3f1773f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
