@@ -16,5 +16,11 @@ namespace Demegraunt.Framework {
             SpriteAnimator.Play(SpriteAnimation, AnimationSpeed, () => OnAnimationFinished.Invoke());
             OnTrigger?.Invoke(SpriteAnimation);
         }
+        
+        [UsedImplicitly]
+        public void InvokeTrigger(string animationName) {
+            SpriteAnimator.Play(animationName, AnimationSpeed, () => OnAnimationFinished.Invoke());
+            OnTrigger?.Invoke(SpriteAnimation);
+        }
     }
 }
