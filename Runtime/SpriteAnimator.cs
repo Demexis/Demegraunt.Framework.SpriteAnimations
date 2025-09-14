@@ -3,13 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Demegraunt.Framework {
-    [RequireComponent(typeof(SpriteRenderer))]
     public sealed class SpriteAnimator : MonoBehaviour {
         [field: SerializeField] public List<SpriteAnimation> Animations { get; set; } = new();
         [field: SerializeField] public List<SpriteAnimationContainer> AnimationContainers { get; set; } = new();
         [field: SerializeField] public float Speed { get; set; } = 1f;
+        
+        [field: SerializeField] public bool BindSpriteRenderer { get; set; } = true;
+        [field: SerializeField] public UnityEvent<Sprite> OnSpriteChanged { get; set; } = new();
         
         public SpriteAnimationPlayer SpriteAnimationPlayer => spriteAnimationPlayer ??= CreatePlayer();
         private SpriteAnimationPlayer spriteAnimationPlayer;
@@ -18,11 +21,22 @@ namespace Demegraunt.Framework {
         
         private void Awake() {
             sR = GetComponent<SpriteRenderer>();
-            
             spriteAnimationPlayer ??= CreatePlayer();
-            SpriteAnimationPlayer.SpriteChanged += sprite => {
+            spriteAnimationPlayer.SpriteChanged += PlayerOnSpriteChanged;
+        }
+        
+        private void OnDestroy() {
+            if (spriteAnimationPlayer != null) {
+                spriteAnimationPlayer.SpriteChanged -= PlayerOnSpriteChanged;
+            }
+        }
+
+        private void PlayerOnSpriteChanged(Sprite sprite) {
+            if (BindSpriteRenderer && sR != null) {
                 sR.sprite = sprite;
-            };
+            }
+            
+            OnSpriteChanged.Invoke(sprite);
         }
 
         private SpriteAnimationPlayer CreatePlayer() {
