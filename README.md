@@ -8,6 +8,7 @@ Contains basic components and an editor tool.
 - [Setup](#setup)
   - [Requirements](#requirements)
   - [Installation](#installation)
+  - [Usage](#usage)
 
 ## Setup
 
@@ -40,3 +41,36 @@ Alternatively, open *Packages/manifest.json* and add the following to the depend
 }
 ```
 
+### Usage
+1) Attach the `SpriteAnimator` component to a game-object with a `SpriteRenderer` or other sprite-based renderer. The `UnityEvent<Sprite> OnSpriteChanged` is dedicated to binding the sprite to other renderers.
+
+<img width="650" height="542" alt="sprite-animator-component-preview" src="https://github.com/user-attachments/assets/4cea309a-3d43-4d06-a2f1-dffc044cedaa" />
+
+2) Add sprite animations. This can be done via serializable data or using `ScriptableObject` - `SpriteAnimationContainer`. 
+
+You can create a container for animation manually via context menu by following this path: `ScriptableObjects/SpriteAnimationContainer`. Alternatively, you can use the editor tool by opening it from the menu: `Tools/Demegraunt/Sprite Animator`.
+
+Click "File -> Create New..." to open save file dialog window.
+
+<img width="923" height="506" alt="sprite-animator-editor-tool-preview" src="https://github.com/user-attachments/assets/28e4f60c-6aa3-49b0-aeab-b87b06627a58" />
+
+3) To play animation through code, there are public methods in `SpriteAnimator`: 
+
+```cs
+bool Play(string animationName, float speed = 1f, Action finishedFrameLoop = null, SpriteAnimationPlayerSettings settings = default)
+```
+```cs
+void Play(SpriteAnimationContainer animation, float speed = 1f, Action finishedFrameLoop = null, SpriteAnimationPlayerSettings settings = default)
+```
+
+And implicit methods if you want to play animations via UnityEvent-s:
+```cs
+void PlayImplicitly(string animationName)
+```
+```cs
+void PlayImplicitly(SpriteAnimationContainer animation)
+```
+
+4) There is a `SpriteAnimatorDelegate` component that provides even more control when using UnityEvent-oriented approach.
+
+<img width="489" height="432" alt="sprite-animator-delegate-preview" src="https://github.com/user-attachments/assets/9e3f477e-0a77-4799-a813-da2b01fcda56" />
