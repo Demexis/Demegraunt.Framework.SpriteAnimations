@@ -15,6 +15,7 @@ Contains basic components and an editor tool.
 ### Requirements
 
 * Unity 2022.2 or later
+* [UnityStandaloneFileBrowser](https://github.com/gkngkc/UnityStandaloneFileBrowser)
 
 ### Installation
 
