@@ -7,6 +7,7 @@ Contains basic components and an editor tool.
 ## Table of Contents
 - [Setup](#setup)
   - [Requirements](#requirements)
+  - [Embedded Dependencies](#embedded-dependencies)
   - [Installation](#installation)
   - [Usage](#usage)
 
@@ -15,6 +16,9 @@ Contains basic components and an editor tool.
 ### Requirements
 
 * Unity 2022.2 or later
+
+### Embedded Dependencies
+
 * [UnityStandaloneFileBrowser](https://github.com/gkngkc/UnityStandaloneFileBrowser)
 
 ### Installation
