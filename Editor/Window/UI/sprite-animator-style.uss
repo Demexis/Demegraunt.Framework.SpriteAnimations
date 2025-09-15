@@ -1,5 +1,5 @@
 .border-outline {
-    border-width: 1;
+    border-width: 1px;
     border-left-color: rgb(85, 85, 85);
     border-top-color: rgb(85, 85, 85);
     border-right-color: rgb(20, 20, 20);
@@ -8,7 +8,7 @@
 
 .window-header {
     background-color: rgb(38, 38, 38);
-    font-size: 14;
+    font-size: 14px;
     -unity-font-style: bold;
 }
 
@@ -18,32 +18,32 @@
     border-top-color: rgba(85, 85, 85, 1);
     border-right-color: rgba(20, 20, 20, 1);
     border-bottom-color: rgba(20, 20, 20, 1);
-    height: 5;
+    height: 5px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .vertical-separator {
-    border-width: 1;
+    border-width: 1px;
     border-left-color: rgba(85, 85, 85, 1);
     border-top-color: rgba(85, 85, 85, 1);
     border-right-color: rgba(20, 20, 20, 1);
     border-bottom-color: rgba(20, 20, 20, 1);
-    width: 5;
+    width: 5px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .dark-horizontal-separator {
     background-color: rgba(0, 0, 0, 0.5);
-    height: 5;
+    height: 5px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .dark-vertical-separator {
     background-color: rgba(0, 0, 0, 0.5);
-    width: 5;
+    width: 5px;
     flex-grow: 0;
     flex-shrink: 0;
 }
