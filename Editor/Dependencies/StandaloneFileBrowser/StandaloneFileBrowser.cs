@@ -1,7 +1,7 @@
 using System;
 
 namespace SFB {
-    public struct ExtensionFilter {
+    internal struct ExtensionFilter {
         public string Name;
         public string[] Extensions;
 
@@ -11,7 +11,7 @@ namespace SFB {
         }
     }
 
-    public class StandaloneFileBrowser {
+    internal class StandaloneFileBrowser {
         private static IStandaloneFileBrowser _platformWrapper = null;
 
         static StandaloneFileBrowser() {

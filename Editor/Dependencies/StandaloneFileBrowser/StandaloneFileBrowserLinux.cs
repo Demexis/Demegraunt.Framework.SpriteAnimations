@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SFB {
 
-    public class StandaloneFileBrowserLinux : IStandaloneFileBrowser {
+    internal class StandaloneFileBrowserLinux : IStandaloneFileBrowser {
         
         private static Action<string[]> _openFileCb;
         private static Action<string[]> _openFolderCb;
