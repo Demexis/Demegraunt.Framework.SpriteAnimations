@@ -9,7 +9,7 @@ namespace Demegraunt.Framework.Editor {
             var spriteAnimator = (SpriteAnimator)target;
             var debugString = GetDebugString(spriteAnimator);
 
-            EditorGUILayout.TextField("Debug", debugString);
+            EditorGUILayout.LabelField("Debug", debugString);
         }
 
         private string GetDebugString(SpriteAnimator spriteAnimator) {

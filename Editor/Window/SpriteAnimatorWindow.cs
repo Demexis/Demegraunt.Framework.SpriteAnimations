@@ -182,6 +182,7 @@ namespace Demegraunt.Framework.Editor {
 
             ResetPreview();
             UpdatePreviewImage();
+            UpdatePreviewProgressbar();
 
             if (CurrentSpriteAnimation == null) {
                 controls.previewSelectedInspectorElement.Unbind();
@@ -243,7 +244,10 @@ namespace Demegraunt.Framework.Editor {
 
             controls.previewProgressBar.value = spritePlayback.GetPlaybackProgress01();
 
-            var frameIndicator = $"({spritePlayback.Index}/{spritePlayback.animation.FrameSprites.Count})";
+            var totalCount = spritePlayback.animation.FrameSprites.Count;
+            var currentFrame = spritePlayback.Index;
+            
+            var frameIndicator = $"({currentFrame}/{totalCount})";
             var timeIndicator = $"({spritePlayback.GetPlayedTime():F2} s /{spritePlayback.GetTotalTime():F2} s)";
 
             controls.previewProgressBar.title =
