@@ -54,7 +54,7 @@ Alternatively, open *Packages/manifest.json* and add the following to the depend
 ---
 2) Add sprite animations. This can be done via serializable data or using `ScriptableObject` - `SpriteAnimationContainer`. 
 
-You can create a container for animation manually via context menu by following this path: `ScriptableObjects/SpriteAnimationContainer`. Alternatively, you can use the editor tool by opening it from the menu: `Tools/Demegraunt/Sprite Animator`.
+You can create a container for animation manually via context menu by following this path: `Create -> ScriptableObjects -> SpriteAnimationContainer`. Alternatively, you can use the editor tool by opening it from the menu: `Tools/Demegraunt/Sprite Animator`.
 
 Click "File -> Create New..." to open save file dialog window.
 
