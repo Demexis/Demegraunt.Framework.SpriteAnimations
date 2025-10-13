@@ -8,7 +8,7 @@
   "displayName": "Demegraunt Framework Sprite Animations",
   "description": "Simple sprite animations if you don't need complexity of the default Unity's animator.",
   "unity": "2022.2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/Demexis/Demegraunt.Framework.SpriteAnimations.git"
