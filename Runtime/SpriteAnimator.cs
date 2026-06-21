@@ -63,6 +63,10 @@ namespace Demegraunt.Framework {
             return SpriteAnimationPlayer.Play(animationName, speed, finishedFrameLoop, settings);
         }
 
+        public void Play(SpriteAnimation spriteAnimation, float speed = 1f, Action finishedFrameLoop = null, SpriteAnimationPlayerSettings settings = default) {
+            SpriteAnimationPlayer.Play(spriteAnimation, speed, finishedFrameLoop, settings);
+        }
+        
         public void Play(SpriteAnimationContainer animation, float speed = 1f, Action finishedFrameLoop = null, SpriteAnimationPlayerSettings settings = default) {
             SpriteAnimationPlayer.Play(animation.SpriteAnimation, speed, finishedFrameLoop, settings);
         }
