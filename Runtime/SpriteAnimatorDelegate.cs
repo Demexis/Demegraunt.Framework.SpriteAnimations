@@ -1,8 +1,10 @@
 ﻿using JetBrains.Annotations;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Demegraunt.Framework {
+    [Obsolete]
     public sealed class SpriteAnimatorDelegate : MonoBehaviour {
         [field: SerializeField] public SpriteAnimator SpriteAnimator { get; set; }
         [field: SerializeField] public SpriteAnimationContainer SpriteAnimation { get; set; }
