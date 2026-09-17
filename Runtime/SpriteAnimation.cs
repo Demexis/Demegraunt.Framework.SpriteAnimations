@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Demegraunt.Framework.Internal;
 
 namespace Demegraunt.Framework {
     [Serializable]

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.Contracts;
 using UnityEngine;
 
-namespace Demegraunt.Framework {
+namespace Demegraunt.Framework.Internal {
     internal static class FloatExtensions {
         [Pure]
         public static bool IsApproximately(this float f, float value, float threshold = 0.001f) {
