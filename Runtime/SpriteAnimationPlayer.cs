@@ -7,7 +7,7 @@ namespace Demegraunt.Framework {
     public sealed class SpriteAnimationPlayer {
         public event Action<Sprite> SpriteChanged;
         
-        public SpritePlayback Playback { get; private set; }
+        [CanBeNull] public SpritePlayback Playback { get; private set; }
         public float Speed { get; set; } = 1f;
         
         [CanBeNull] private IEnumerable<SpriteAnimation> SpriteAnimations { get; }

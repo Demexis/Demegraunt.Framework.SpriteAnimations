@@ -114,6 +114,19 @@ namespace Demegraunt.Framework {
             return progress;
         }
 
+        public void SetPlaybackProgress01(float progress) {
+            var newIndex = (int)(progress * (animation.FrameSprites.Count - 1) + 0.01f);
+            if (newIndex == Index) {
+                return;
+            }
+            newIndex = Mathf.Clamp(newIndex, 0, animation.FrameSprites.Count - 1);
+            Index = newIndex;
+            if (animation.FrameSprites.Count == 0) {
+                return;
+            }
+            spriteSet.Invoke(animation.FrameSprites[Index]);
+        }
+
         public float GetTotalTime() {
             if (animation == null || animation.FrameSprites.Count == 0) {
                 return 0;
