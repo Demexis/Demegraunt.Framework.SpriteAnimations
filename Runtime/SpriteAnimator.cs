@@ -71,6 +71,10 @@ namespace Demegraunt.Framework {
             SpriteAnimationPlayer.Play(animation.SpriteAnimation, speed, finishedFrameLoop, settings);
         }
 
+        public void Stop() {
+            SpriteAnimationPlayer.Stop();
+        }
+
         public float GetCurrentAnimationTime => SpriteAnimationPlayer.GetCurrentAnimationTime;
     }
 }
